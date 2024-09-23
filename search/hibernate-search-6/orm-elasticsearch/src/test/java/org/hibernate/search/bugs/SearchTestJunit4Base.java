@@ -28,5 +28,4 @@ public abstract class SearchTestJunit4Base extends BaseCoreFunctionalTestCase {
 			super.releaseSessionFactory();
 		}
 	}
-
 }

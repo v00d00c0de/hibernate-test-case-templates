@@ -10,7 +10,7 @@
 	<properties>
 		<version.com.h2database>2.3.232</version.com.h2database>
 		<version.junit-jupiter>5.11.0</version.junit-jupiter>
-		<version.org.hibernate.orm>6.6.0.Final</version.org.hibernate.orm>
+		<version.org.hibernate.orm>6.6.1.Final</version.org.hibernate.orm>
 		<version.org.assertj.assertj-core>3.26.3</version.org.assertj.assertj-core>
 	</properties>
 
@@ -39,31 +39,36 @@
 			<artifactId>hibernate-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.hibernate.orm</groupId>
-			<artifactId>hibernate-testing</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>${version.com.h2database}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-testing</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-launcher</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
 			<version>${version.org.assertj.assertj-core}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -74,8 +79,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.13.0</version>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<release>11</release>
 				</configuration>
 			</plugin>
 			<plugin>
